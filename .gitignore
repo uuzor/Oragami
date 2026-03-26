@@ -1,0 +1,29 @@
+# Test ledger and generated files
+test-ledger/
+
+# Build artifacts
+**/target/
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Database files
+*.db
+*.sqlite
+
+# Large binary files
+*.tar.gz
+*.tar.bz2
+*.tar.zst

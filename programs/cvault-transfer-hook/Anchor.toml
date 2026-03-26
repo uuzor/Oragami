@@ -1,0 +1,28 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+cvault-transfer-hook = "Cvau1tT3xGK9XQDqVjG1qGjvMaVQDqVjG1qGjvMaVQD"
+
+[programs.devnet]
+cvault-transfer-hook = "Cvau1tT3xGK9XQDqVjG1qGjvMaVQDqVjG1qGjvMaVQD"
+
+[programs.testnet]
+cvault-transfer-hook = "Cvau1tT3xGK9XQDqVjG1qGjvMaVQDqVjG1qGjvMaVQD"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[profile.release]
+overflow-checks = true
+
+[workspace]
+members = ["programs/cvault-transfer-hook"]
