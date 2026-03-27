@@ -5,9 +5,13 @@ import { AppProvider } from '@solana/connector/react';
 import { getDefaultConfig, getDefaultMobileConfig } from '@solana/connector/headless';
 import { ThemeProvider } from '@/components/theme-provider';
 import { useRpcStore } from '@/stores/rpc-store';
+import { isFireblocksConfigured } from '@/lib/fireblocks/config';
 
 export function Providers({ children }: { children: ReactNode }) {
     const customRpcs = useRpcStore(state => state.customRpcs);
+    
+    // Check if Fireblocks is configured
+    const fireblocksConfigured = isFireblocksConfigured();
 
     const connectorConfig = useMemo(() => {
         // Get custom RPC URL from environment variable

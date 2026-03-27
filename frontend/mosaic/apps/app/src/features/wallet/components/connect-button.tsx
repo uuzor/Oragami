@@ -8,7 +8,8 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { WalletModal } from './wallet-modal';
 import { WalletDropdownContent } from './wallet-dropdown-content';
-import { Wallet, ChevronDown } from 'lucide-react';
+import { FireblocksConnectButton } from './fireblocks-connect-button';
+import { Wallet, ChevronDown, Shield } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ConnectButtonProps {
@@ -68,11 +69,12 @@ export function ConnectButton({ className }: ConnectButtonProps) {
     }
 
     return (
-        <>
+        <div className="flex items-center gap-2">
             <Button size="sm" onClick={() => setIsModalOpen(true)} className={className}>
                 Connect Wallet
             </Button>
+            <FireblocksConnectButton size="sm" />
             <WalletModal open={isModalOpen} onOpenChange={setIsModalOpen} />
-        </>
+        </div>
     );
 }

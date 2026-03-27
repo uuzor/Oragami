@@ -27,3 +27,8 @@ Thumbs.db
 *.tar.gz
 *.tar.bz2
 *.tar.zst
+
+six-data-access/
+six-data-access/*
+
+six-data-access/*/**
